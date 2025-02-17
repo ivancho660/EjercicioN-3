@@ -22,13 +22,13 @@
             <a href="articles.html">Articles</a> |
             <a href="contact.html">Contact</a>
         </div>
-        <div class="flex justify-center items-center h-screen">
-            <button id="themeToggle" class="px-4 py-2 bg-gray-800 text-white rounded-lg shadow-md">
-                Modo Oscuro 🌙
+        <div class="">
+            <button id="themeToggle" class="boton">
+                Modo Oscuro 
             </button>
         </div>
     </header>
-    <h1> Frontend Developer</h1>
+    <h1 class="titulo"> Frontend Developer</h1>
     <p>HTML only with proper layout, no styling</p>
     <div class="container">
         <nav>
@@ -73,14 +73,7 @@
                 <p>John doe was a brilliant student; always stood out with his assignments.</p>
                 <p><strong>Jane Doe</strong><br>Assistant Professor</p>
             </div>
-            <div class="item2">
-                <p>John doe was a brilliant student; always stood out with his assignments.</p>
-                <p><strong>Jane Doe</strong><br>Assistant Professor</p>
-            </div>
-            <div class="item3">
-                <p>John doe was a brilliant student; always stood out with his assignments.</p>
-                <p><strong>Jane Doe</strong><br>Assistant Professor</p>
-            </div>
+            
         </div>
 
         <div class="finalPagina">
@@ -88,26 +81,28 @@
         </div>
     </footer>
     <script>
-        const button = document.getElementById('themeToggle');
-        const body = document.body;
+        
+    const button = document.getElementById('themeToggle');
+    const body = document.body;
 
-        // Verificar preferencia almacenada
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-            button.textContent = 'Modo Claro ☀️';
+    // Verificar preferencia almacenada
+    if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    button.textContent = 'Modo Claro ';
+    }
+
+    button.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            button.textContent = 'Modo Claro ';
+        } else {
+            localStorage.setItem('theme', 'light');
+            button.textContent = 'Modo Oscuro ';
         }
-
-        button.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-                button.textContent = 'Modo Claro ☀️';
-            } else {
-                localStorage.setItem('theme', 'light');
-                button.textContent = 'Modo Oscuro 🌙';
-            }
-        });
+    });
+    
     </script>
 </body>
 </html>

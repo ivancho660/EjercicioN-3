@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Formulario de contacto">
     <meta name="keywords" content="contacto, formulario, mensaje">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Contacto</title>
 </head>
@@ -18,6 +20,11 @@
             <a href="articles.html">Articles</a> |
             <a href="contact.html">Contact</a>
         </nav>
+        <div class="">
+            <button id="themeToggle" class="boton">
+                Modo Oscuro 
+            </button>
+        </div>
     </header>
     <br>
     <main>
@@ -49,5 +56,27 @@
         <p>&copy; all rights reserved 2025</p>
 
     </footer>
+    <script>
+        const button = document.getElementById('themeToggle');
+const body = document.body;
+
+// Verificar preferencia almacenada
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    button.textContent = 'Modo Claro ';
+}
+
+button.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        button.textContent = 'Modo Claro ';
+    } else {
+        localStorage.setItem('theme', 'light');
+        button.textContent = 'Modo Oscuro ';
+    }
+});
+    </script>
 </body>
 </html>

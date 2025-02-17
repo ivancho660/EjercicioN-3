@@ -1,18 +1,16 @@
-/* Estilos generales */
-/* body {
-    box-sizing: border-box;
+
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s; 
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     border: 2px solid black;
-} */
-body {
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
+    
 }
-/* Encabezado */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -22,16 +20,14 @@ header {
 }
 .container{
     display: flex; 
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    align-items: center; /* Alinea verticalmente */
-    gap: 20px; /* Espacio entre elementos */
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 20px; 
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        border: 2px solid black;
+    border: 2px solid black;
     
 }
 .nombre {
@@ -42,24 +38,26 @@ header {
 .barra a {
     text-decoration: none;
     margin: 0 10px;
-    color: black;
 }
 
-/* Contenido principal */
+
 h1, p {
+    font-family: "font-sans";
     text-align: center;
 }
 
+.titulo{
+    font-family: "font-sans";
+}
 
 
-/* Estilos para el footer */
 footer {
     text-align: center;
     padding: 20px;
     border-top: 2px solid black;
 }
 
-/* Contenedor de las reseñas */
+
 footer h2 {
     text-align: left;
     margin-left: 0px;
@@ -73,46 +71,29 @@ footer div {
 }
 .padre{
     display: flex; 
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    align-items: center; /* Alinea verticalmente */
-    gap: 20px; /* Espacio entre elementos */
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 20px; 
     padding: 20px;
 }
 
-/* Estilos individuales de cada reseña */
+
 .item1, .item2, .item3 {
     border: 2px solid black;
-    border-radius: 15px; /* Bordes semi-redondeados */
+    border-radius: 15px; 
     padding: 15px;
     width: 30%;
-    background-color: white;
     text-align: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
     justify-content: center;
+    
 }
 
-/* Copyright */
+
 .finalPagina {
     margin-top: 20px;
     border-top: 2px solid black;
     padding-top: 10px;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .reviews {
-        flex-direction: column;
-    }
-
-    .item1, .item2, .item3 {
-        width: 80%;
-        margin: 10px auto;
-    }
 }
 /* Modo oscuro */
 .dark-mode {
@@ -143,4 +124,86 @@ footer div {
 .dark-mode #themeToggle {
     background-color: yellow;
     color: black;
+}
+
+/* Diseño responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .barra {
+        padding: 0.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav, main, aside {
+        flex: 1 1 100%;
+    }
+
+    nav ul {
+        padding-left: 1rem;
+    }
+
+    footer {
+        padding: 1rem 0;
+    }
+
+    #themeToggle {
+        width: 100%;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .barra {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    nav, main, aside {
+        padding: 0.5rem;
+    }
+}
+/* Estilo responsive para el footer */
+@media screen and (max-width: 768px) {
+    footer .padre {
+        justify-content: center;
+    }
+
+    footer .padre > div {
+        flex: 1 1 100%;
+        margin: 1rem 0;
+    }
+
+    footer .finalPagina {
+        font-size: 12px;
+        padding: 0.5rem;
+    }
+}
+
+/* Estilo responsive para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    footer .padre > div {
+        padding: 0.5rem;
+    }
+
+    footer h2 {
+        font-size: 18px;
+    }
+
+    footer .finalPagina p {
+        font-size: 12px;
+    }
 }
