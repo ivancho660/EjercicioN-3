@@ -1,0 +1,146 @@
+/* Estilos generales */
+/* body {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+} */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+}
+.container{
+    display: flex; 
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
+    
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid black;
+    
+}
+.nombre {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.barra a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+}
+
+/* Contenido principal */
+h1, p {
+    text-align: center;
+}
+
+
+
+/* Estilos para el footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid black;
+}
+
+/* Contenedor de las reseñas */
+footer h2 {
+    text-align: left;
+    margin-left: 0px;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 20px;
+}
+.padre{
+    display: flex; 
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
+}
+
+/* Estilos individuales de cada reseña */
+.item1, .item2, .item3 {
+    border: 2px solid black;
+    border-radius: 15px; /* Bordes semi-redondeados */
+    padding: 15px;
+    width: 30%;
+    background-color: white;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    justify-content: center;
+}
+
+/* Copyright */
+.finalPagina {
+    margin-top: 20px;
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reviews {
+        flex-direction: column;
+    }
+
+    .item1, .item2, .item3 {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+/* Modo oscuro */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Botón de cambio de tema */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#themeToggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cambiar colores en modo oscuro */
+.dark-mode #themeToggle {
+    background-color: yellow;
+    color: black;
+}

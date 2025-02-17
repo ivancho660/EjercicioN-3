@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <meta name="keywords" content="proyectos, desarrollo, portafolio">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Frontend Developer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<body>
+    <header>
+        <div class="nombre">
+            <span>Ivan Camilo Hernandez Rincon</span>
+        </div>
+        <div class="barra">
+            <a href="home.html">Home</a> |
+            <a href="projects.html">Projects</a> |
+            <a href="articles.html">Articles</a> |
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="flex justify-center items-center h-screen">
+            <button id="themeToggle" class="px-4 py-2 bg-gray-800 text-white rounded-lg shadow-md">
+                Modo Oscuro 🌙
+            </button>
+        </div>
+    </header>
+    <h1> Frontend Developer</h1>
+    <p>HTML only with proper layout, no styling</p>
+    <div class="container">
+        <nav>
+            <h2>Projects</h2>
+            <ul>
+                <li>HTML Only Portfolio</li>
+                <li>Calculator</li>
+                <li>Quiz App</li>
+                <li>Countdown Timer</li>
+                <li>Product Upcoming Page</li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Work Experience</h2>
+            <p><strong>roadmap.sh</strong><br> Solved all the frontend projects</p>
+            <a href="#">Visit my Profile</a>
+            
+            <p><strong>OpenSource Work</strong><br> Contributed to 50 open-source projects. Made my own projects with 200 GitHub Stars.</p>
+            <a href="#">Visit my GitHub Profile</a>
+        </main>
+        <aside>
+            <h2>Education</h2>
+            <p>Graduated with a 3.78 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+            <h3>Courses I took:</h3>
+            <ul>
+                <li>Object Oriented Programming</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Web Engineering</li>
+                <li>Artificial Intelligence</li>
+                <li>Human Computer Interaction</li>
+                <li>Computer Graphics</li>
+                <li>Database Management Systems</li>
+                <li>Distributed Networks</li>
+                <li>Discrete Mathematics</li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <h2>Reviews from my Teachers</h2>
+        <div class="padre">
+            <div class="item1">
+                <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                <p><strong>Jane Doe</strong><br>Assistant Professor</p>
+            </div>
+            <div class="item2">
+                <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                <p><strong>Jane Doe</strong><br>Assistant Professor</p>
+            </div>
+            <div class="item3">
+                <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                <p><strong>Jane Doe</strong><br>Assistant Professor</p>
+            </div>
+        </div>
+
+        <div class="finalPagina">
+        <p>&copy; all rights reserved 2025</p>
+        </div>
+    </footer>
+    <script>
+        const button = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Verificar preferencia almacenada
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            button.textContent = 'Modo Claro ☀️';
+        }
+
+        button.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                button.textContent = 'Modo Claro ☀️';
+            } else {
+                localStorage.setItem('theme', 'light');
+                button.textContent = 'Modo Oscuro 🌙';
+            }
+        });
+    </script>
+</body>
+</html>
